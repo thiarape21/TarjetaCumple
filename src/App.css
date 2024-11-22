@@ -1,5 +1,3 @@
-/* App.css */
-
 /* Fuentes */
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300&display=swap");
 
@@ -7,8 +5,10 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f2ebf3; /* Lila pastel suave */
-  background-size: cover;
+  background-image: url('./images/fondo.jpg'); /* Ruta de la imagen */
+  background-size: contain; /* Ajusta la imagen para que se muestre completamente */
+  background-position: top center; /* Centra la imagen horizontalmente y la inicia desde arriba */
+  background-repeat: repeat-y; /* Repite la imagen verticalmente */
   color: #702c9b;
   display: flex;
   justify-content: center;
@@ -33,29 +33,11 @@ body {
   width: 50%;
   max-width: 1000px;
   text-align: center;
+  background-color: rgba(255, 255, 255, 0.644); /* Fondo semitransparente para destacar el texto */
+  padding: 20px;
+  border-radius: 10px;
 }
 
-/* Fondo de los lados izquierdo y derecho */
-.invitation-container::before,
-.invitation-container::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 30%; /* Ajusta el tamaño del fondo en los lados */
-  background-image: url('./images/fondo.png'); /* Asegúrate de que la ruta sea correcta */
-  background-size: contain; /* Ajusta el fondo para que no se estire, manteniendo su proporción */
-  background-position: center top;
-  background-repeat: repeat-y;  /* Evita que el fondo se repita */
-}
-
-.invitation-container::before {
-  left: 0;
-}
-
-.invitation-container::after {
-  right: 0;
-}
 
 /* Estilos de texto */
 .header {
@@ -251,26 +233,11 @@ img {
   }
 }
 
-/* Estilo del contador */
-.countdown {
-  text-align: center;
-  color: #4a295e;
-  font-family: 'Roboto', sans-serif;
-  margin: 40px 0;
-}
-
-.countdown h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  font-weight: bold;
-  color: #6f4e88;
-}
-
 /* Estilo de los elementos del contador */
 .countdown-timer {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 30px; /* Espaciado entre los círculos por defecto */
   font-size: 2rem;
 }
 
@@ -285,8 +252,8 @@ img {
 .circle {
   background: #f7f4ff;
   border: 2px solid #b87ed6;
-  width: 25px; /* Ajusta el tamaño del círculo */
-  height:25px; /* Ajusta el tamaño del círculo */
+  width: 30px; /* Ajusta el tamaño del círculo */
+  height: 30px; /* Ajusta el tamaño del círculo */
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -300,12 +267,28 @@ img {
   color: #6f4e88;
 }
 
-
 .countdown-item p {
   font-size: 1rem;
   color: #4a295e;
   font-weight: 100;
 }
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 480px) {
+  .countdown-timer {
+    gap: 15px; /* Reduce el espacio entre los círculos en pantallas pequeñas */
+  }
+
+  .circle {
+    width: 25px;  /* Ajusta el tamaño de los círculos en pantallas pequeñas */
+    height: 25px; /* Ajusta el tamaño de los círculos en pantallas pequeñas */
+  }
+
+  .countdown-item p {
+    font-size: 0.8rem; /* Reduce el tamaño del texto en pantallas pequeñas */
+  }
+}
+
 
 .music-button {
   background-color: #6a4c9c; /* Tonos lilas */
@@ -324,42 +307,62 @@ img {
 }
 
 .music-button:active {
-  background-color: #4e2d7c; /* Tono más oscuro cuando se hace clic */
+  background-color: #4e2d7c; 
 }
+
 /* Estilos para las imágenes de los vinos */
 .wines {
   display: flex;
   justify-content: space-between;
   gap: 10px;
   margin-top: 20px;
-  flex-wrap: wrap;  /* Permite que las imágenes se ajusten en varias filas si es necesario */
-  max-width: 100%;  /* Asegura que el contenedor no exceda el ancho total */
-  box-sizing: border-box;  /* Se asegura de que los márgenes no afecten el tamaño total */
+  flex-wrap: wrap;  
+  max-width: 100%;  
+  box-sizing: border-box;  
 }
 
 .wine {
   text-align: center;
-  flex-basis: 25%;  /* Cada vino ocupará un 25% del ancho del contenedor */
+  flex-basis: 25%;  
   margin-bottom: 20px;
   box-sizing: border-box;
 }
 
 .wine img {
-  width: 100%;  /* Las imágenes ahora ocuparán el 100% del ancho del contenedor */
-  height: auto;  /* Mantiene la relación de aspecto */
-  object-fit: cover;  /* Asegura que la imagen cubra el área sin distorsionarse */
+  width: 100%; 
+  height: auto; 
+  object-fit: cover; 
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .wine p {
-  font-size: 1rem;  /* Reducí el tamaño del texto para que se vea más balanceado */
+  font-size: 1rem; 
   margin-top: 10px;
   color: #4a295e;
 }
 
-/* Media Query para pantallas más pequeñas */
-/* Media Queries para hacerlo responsive */
+.wines {
+  display: flex;              
+  justify-content: space-around; 
+  gap: 20px;                  
+  flex-wrap: wrap;            
+}
+
+.wine img {
+  width: 150px;  
+  height: 150px; 
+  object-fit: cover;  
+  border-radius: 8px;  
+}
+
+.wine p {
+  text-align: center;
+  font-size: 1rem;
+  color: #702c9b;
+}
+
+
 
 @media (max-width: 1024px) {
   .title {
@@ -391,6 +394,54 @@ img {
     height: 300px;
   }
 }
+
+/* Estilo para la portada */
+.cover-photo {
+  width: 100%; /* Asegura que ocupe todo el ancho disponible */
+  margin-bottom: 20px; /* Espacio entre la portada y la galería */
+}
+
+.cover-photo img {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  object-fit: cover; /* Ajusta la imagen sin distorsión */
+  border-radius: 10px; /* Opcional: bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+}
+
+/* Ajustes para la galería */
+.photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+  gap: 15px; /* Espacio entre las fotos */
+  justify-items: center; /* Centra los elementos en el grid */
+}
+
+
+.photo-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.photo-container:hover img {
+  transform: scale(1.05); /* Zoom al pasar el ratón */
+}
+
+.photo-container.horizontal {
+  grid-column: 1 / -1; /* Ocupa toda la fila */
+  display: block;
+  width: 100%;
+}
+
+.photo-container.horizontal img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 
 @media (max-width: 768px) {
   .wine {
