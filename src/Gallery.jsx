@@ -15,7 +15,7 @@ import foto15 from './images/foto15.jpeg';
 
 const Gallery = () => {
   const photos = [foto1, foto2, foto3, foto4, foto5, foto6, foto10,
-    foto11, foto12, foto13, foto15, foto14];
+    foto11, foto12, foto15, foto13, foto14];
 
   return (
     <div className="gallery">

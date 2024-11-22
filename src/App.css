@@ -285,8 +285,8 @@ img {
 .circle {
   background: #f7f4ff;
   border: 2px solid #b87ed6;
-  width: 50px; /* Ajusta el tamaño del círculo */
-  height: 50px; /* Ajusta el tamaño del círculo */
+  width: 25px; /* Ajusta el tamaño del círculo */
+  height:25px; /* Ajusta el tamaño del círculo */
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -295,13 +295,14 @@ img {
 }
 
 .circle span {
-  font-size: 1.2rem; /* Ajusta el tamaño de los números dentro del círculo */
+  font-size: 0.8rem !important; /* Forzar el tamaño más pequeño con !important */
   font-weight: bold;
   color: #6f4e88;
 }
 
+
 .countdown-item p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #4a295e;
   font-weight: 100;
 }
@@ -358,40 +359,57 @@ img {
 }
 
 /* Media Query para pantallas más pequeñas */
-@media (max-width: 768px) {
-  .wine {
-    flex-basis: 45%;  /* En pantallas medianas, las imágenes ocuparán el 45% del ancho */
+/* Media Queries para hacerlo responsive */
+
+@media (max-width: 1024px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .name {
+    font-size: 4rem;
+  }
+
+  .countdown h2 {
+    font-size: 1.2rem;
+  }
+
+  .countdown-timer span {
+    font-size: 1.8rem;
+  }
+
+  .details h2 {
+    font-size: 1.5rem;
+  }
+
+  .photos {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas por fila */
   }
 
   .wine img {
-    width: 100%;  /* Las imágenes ocuparán todo el espacio disponible */
+    width: 250px;  /* Aumentar el tamaño de las imágenes en la galería */
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wine {
+    flex-basis: 45%;  /* Hacer las imágenes un poco más grandes en pantallas medianas */
+  }
+
+  .wine img {
+    width: 90%;  /* Hacer las imágenes más grandes, ocupando el 90% del contenedor */
   }
 }
 
 @media (max-width: 480px) {
   .wine {
-    flex-basis: 100%;  /* En pantallas muy pequeñas, las imágenes ocuparán el 100% del ancho */
+    flex-basis: 100%;  /* Las imágenes ocupan el 100% del contenedor */
   }
 
   .wine img {
-    width: 100%;  /* Las imágenes ocuparán todo el espacio disponible */
+    width: 100%;  /* Las imágenes ocupan todo el espacio disponible */
+    max-width: 350px; /* Limitar el tamaño máximo de las imágenes */
+    height: auto;
   }
 }
-
-
-  .countdown-timer {
-    flex-direction: column;
-  }
-
-  .countdown-item {
-    flex-direction: row;
-  }
-
-  .photos {
-    grid-template-columns: repeat(1, 1fr); /* 1 columna por fila */
-  }
-
-  .gallery {
-    margin: 10px;
-  }
-
