@@ -51,7 +51,7 @@ const App = () => {
           <h1>_________</h1>
           <h2>Detalles del Evento</h2>
           <p>
-            📅 <strong>Fecha:</strong> 12 de Febrero <br /> <br />
+            📅 <strong>Fecha:</strong> 2 de Febrero <br /> <br />
             🕒 <strong>Hora:</strong> 3:30 PM<br /><br />
             🎩 <strong>Vestimenta:</strong> Formal<br /><br />
             📍 <strong>Ubicación:</strong> <br /><br />
@@ -63,7 +63,7 @@ const App = () => {
           🎁🍷
           <p>
             <strong>Tu compañía siempre es lo más importante</strong> pero agradecería
-            mucho si en este día tan especial me obsequias alguna de estas botellas de vino:<br />
+            mucho si en este día tan especial me obsequias alguna de estas botellas:<br />
           </p>
 
           <div className="wines">
