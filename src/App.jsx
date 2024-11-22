@@ -1,31 +1,28 @@
 import React, { useRef, useState } from "react";
 import "./App.css";
 
-// Importar los componentes
 import Gallery from './Gallery';
 import Countdown from './Countdown';
 
 const App = () => {
-  const audioRef = useRef(null); // Crear la referencia para el audio
-  const [isPlaying, setIsPlaying] = useState(false); // Estado para controlar si la música está reproduciéndose
-
+  const audioRef = useRef(null); 
+  const [isPlaying, setIsPlaying] = useState(false); 
   const openLocation = () => {
     window.open("https://goo.su/83FW5VN", "_blank");
   };
 
-  // Función para alternar play/pause
   const handlePlayPauseMusic = () => {
     if (isPlaying) {
-      audioRef.current.pause(); // Pausar la música
+      audioRef.current.pause();
     } else {
-      audioRef.current.play(); // Reproducir la música
+      audioRef.current.play(); 
     }
-    setIsPlaying(!isPlaying); // Alternar el estado
+    setIsPlaying(!isPlaying); 
   };
 
   return (
     <div className="invitation-container">
-      {/* Agregar el audio pero no con autoplay, solo cuando se haga clic */}
+
       <audio ref={audioRef} loop>
         <source src="/musica/musica.mp3" type="audio/mp3" />
         Tu navegador no soporta el elemento de audio.
@@ -44,7 +41,6 @@ const App = () => {
           <h1 className="name">Yolanda</h1><br /><br />
         </div>
         <div className="details">
-          {/* Usamos los componentes importados */}
           <Gallery />
           <h1>___________________</h1>
           <h2>Cuenta regresiva:</h2>
@@ -78,7 +74,8 @@ const App = () => {
           </div>
           <h1>___________________</h1>
           <h2>Confirma tu asistencia</h2>
-          <p>Confirma tu asistencia al (123) 456-7890</p>
+          <p>Confirma tu asistencia al (506) 7102-7304</p>
+          <p>Thiara Espinoza</p>
 
   
         </div>
