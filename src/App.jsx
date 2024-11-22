@@ -8,7 +8,7 @@ const App = () => {
   const [isPlaying, setIsPlaying] = useState(false); 
 
   const openLocation = () => {
-    window.open("https://goo.su/83FW5VN", "_blank");
+    window.open("https://maps.app.goo.gl/3SLjnHiGfhhhTM9J9", "_blank");
   };
 
   const handlePlayPauseMusic = () => {
