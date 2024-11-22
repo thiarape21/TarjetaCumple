@@ -42,11 +42,11 @@ const App = () => {
         </div>
         <div className="details">
           <Gallery />
-          <h1>___________________</h1>
+          <h1>_________</h1>
           <h2>Cuenta regresiva:</h2>
           <Countdown />
         
-          <h1>___________________</h1>
+          <h1>_________</h1>
           <h2>Detalles del Evento</h2>
           <p>
             📅 <strong>Fecha:</strong> 12 de Febrero <br /> <br />
@@ -55,7 +55,7 @@ const App = () => {
             📍 <strong>Ubicación:</strong>{" "}<br /><br />
             <button onClick={openLocation}>Ver Ubicación</button>
           </p>
-          <h1>___________________</h1>
+          <h1>_________</h1>
           <h2>Presentes</h2>
           🎁🍷
           <p>
@@ -72,7 +72,7 @@ const App = () => {
               <p>Vino 2</p>
             </div>
           </div>
-          <h1>___________________</h1>
+          <h1>_________</h1>
           <h2>Confirma tu asistencia</h2>
           <p>Confirma tu asistencia al (506) 7102-7304</p>
           <p>Thiara Espinoza</p>

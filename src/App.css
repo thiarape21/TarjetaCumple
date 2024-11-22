@@ -187,8 +187,8 @@ img {
 }
 
 .wine img {
-  width: 150px;  /* Ajusta el tamaño de las imágenes */
-  height: 200px;
+  width: 200px;  /* Aumenta el tamaño de las imágenes */
+  height: 250px;
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -199,7 +199,6 @@ img {
   margin-top: 10px;
   color: #4a295e;
 }
-
 
 /* Estilo para las imágenes horizontales */
 .horizontal img {
@@ -244,6 +243,11 @@ img {
 
   .photos {
     grid-template-columns: repeat(2, 1fr); /* 2 columnas por fila */
+  }
+
+  .wine img {
+    width: 250px; /* Aumentar el tamaño de las imágenes en la galería */
+    height: 300px;
   }
 }
 
@@ -321,64 +325,58 @@ img {
 .music-button:active {
   background-color: #4e2d7c; /* Tono más oscuro cuando se hace clic */
 }
-
-
-@media (max-width: 768px) {
-  .title {
-    font-size: 2rem; /* Ajuste del tamaño de la fuente en pantallas más pequeñas */
-  }
-
-  .name {
-    font-size: 3.5rem;
-  }
-
-  .countdown h2 {
-    font-size: 1.2rem;
-  }
-
-  .countdown-timer span {
-    font-size: 1.5rem;
-  }
-
-  .details h2 {
-    font-size: 1.3rem;
-  }
-
-  .photos {
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas por fila */
-  }
-
-  .photo-container {
-    max-width: 90%; /* Hacer las fotos un poco más pequeñas */
-  }
+/* Estilos para las imágenes de los vinos */
+.wines {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;  /* Permite que las imágenes se ajusten en varias filas si es necesario */
 }
 
-@media (max-width: 480px) {
+.wine {
+  text-align: center;
+  flex-basis: 30%;  /* Cada vino ocupará un 30% del ancho del contenedor */
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.wine img {
+  width: 100%;  /* Hace que las imágenes sean responsivas */
+  height: auto;  /* Mantiene la relación de aspecto */
+  object-fit: cover;  /* Asegura que la imagen cubra el área sin distorsionarse */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.wine p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  color: #4a295e;
+}
+@media (max-width: 768px) {
   .title {
-    font-size: 1.5rem;
+    font-size: 2rem; /* Ajuste del tamaño de fuente */
   }
 
-  .name {
-    font-size: 2.5rem;
+  .countdown-timer {
+    flex-direction: column;
   }
 
-  .countdown h2 {
-    font-size: 1rem;
+  .countdown-item {
+    flex-direction: row;
   }
 
-  .countdown-timer span {
-    font-size: 1.3rem;
-  }
-
-  .details h2 {
-    font-size: 1.2rem;
+  .wine img {
+    width: 220px;
+    height: 300px;
   }
 
   .photos {
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas por fila */
+    grid-template-columns: repeat(1, 1fr); /* 1 columna por fila */
   }
 
-  .photo-container {
-    max-width: 90%; /* Reducir aún más el tamaño de las fotos */
+  .gallery {
+    margin: 10px;
   }
 }
