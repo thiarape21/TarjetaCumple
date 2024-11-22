@@ -328,21 +328,23 @@ img {
 /* Estilos para las imágenes de los vinos */
 .wines {
   display: flex;
-  justify-content: space-around;
-  gap: 20px;
+  justify-content: space-between;
+  gap: 10px;
   margin-top: 20px;
   flex-wrap: wrap;  /* Permite que las imágenes se ajusten en varias filas si es necesario */
+  max-width: 100%;  /* Asegura que el contenedor no exceda el ancho total */
+  box-sizing: border-box;  /* Se asegura de que los márgenes no afecten el tamaño total */
 }
 
 .wine {
   text-align: center;
-  flex-basis: 30%;  /* Cada vino ocupará un 30% del ancho del contenedor */
+  flex-basis: 25%;  /* Cada vino ocupará un 25% del ancho del contenedor */
   margin-bottom: 20px;
   box-sizing: border-box;
 }
 
 .wine img {
-  width: 100%;  /* Hace que las imágenes sean responsivas */
+  width: 100%;  /* Las imágenes ahora ocuparán el 100% del ancho del contenedor */
   height: auto;  /* Mantiene la relación de aspecto */
   object-fit: cover;  /* Asegura que la imagen cubra el área sin distorsionarse */
   border-radius: 8px;
@@ -350,14 +352,32 @@ img {
 }
 
 .wine p {
-  font-size: 1.1rem;
+  font-size: 1rem;  /* Reducí el tamaño del texto para que se vea más balanceado */
   margin-top: 10px;
   color: #4a295e;
 }
+
+/* Media Query para pantallas más pequeñas */
 @media (max-width: 768px) {
-  .title {
-    font-size: 2rem; /* Ajuste del tamaño de fuente */
+  .wine {
+    flex-basis: 45%;  /* En pantallas medianas, las imágenes ocuparán el 45% del ancho */
   }
+
+  .wine img {
+    width: 100%;  /* Las imágenes ocuparán todo el espacio disponible */
+  }
+}
+
+@media (max-width: 480px) {
+  .wine {
+    flex-basis: 100%;  /* En pantallas muy pequeñas, las imágenes ocuparán el 100% del ancho */
+  }
+
+  .wine img {
+    width: 100%;  /* Las imágenes ocuparán todo el espacio disponible */
+  }
+}
+
 
   .countdown-timer {
     flex-direction: column;
@@ -367,11 +387,6 @@ img {
     flex-direction: row;
   }
 
-  .wine img {
-    width: 220px;
-    height: 300px;
-  }
-
   .photos {
     grid-template-columns: repeat(1, 1fr); /* 1 columna por fila */
   }
@@ -379,4 +394,4 @@ img {
   .gallery {
     margin: 10px;
   }
-}
+
