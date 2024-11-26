@@ -430,7 +430,7 @@ img {
 .photos {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
-  gap: 15px; /* Espacio entre las fotos */
+  gap: 20px; /* Espacio entre las fotos */
   justify-items: center; /* Centra los elementos en el grid */
 }
 

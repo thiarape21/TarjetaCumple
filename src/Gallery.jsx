@@ -11,6 +11,7 @@ import foto12 from './images/foto12.jpeg';
 import foto13 from './images/foto13.jpeg';
 import foto14 from './images/foto14.jpeg';
 import foto15 from './images/foto15.jpeg';
+import foto16 from './images/foto16.jpeg';
 
 const Gallery = () => {
   const photos = [foto1, foto3, foto4, foto5, foto6, foto10, foto11, foto12, foto15, foto13, foto14];
@@ -32,6 +33,14 @@ const Gallery = () => {
             <img src={photo} alt={`Foto ${index + 1}`} />
           </div>
         ))}
+      </div>
+
+      {/* Espacio adicional antes de la foto final */}
+      <div className="spacer"></div>
+
+      {/* Foto final */}
+      <div className="cover-photo">
+      <br /><img src={foto16} alt="Foto final" />
       </div>
     </div>
   );
