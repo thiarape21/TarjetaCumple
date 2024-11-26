@@ -44,39 +44,32 @@ body {
   margin-bottom: 10px;
 }
 
-.subtitle1 {
+.subtitle1, .subtitle2 {
   font-family: 'Roboto', sans-serif;
-  font-size: 1.2rem; /* Tamaño más discreto */
-  color: #4a295e;
-  margin-bottom: -10px;
-  letter-spacing: 1px;
-}
-
-.subtitle2 {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.2rem; /* Tamaño más discreto */
-  color: #4a295e;
-  margin-bottom: -20px;
-  letter-spacing: 1px;
+  font-size: 1rem; /* Tamaño más pequeño */
+  color: #4a295e; 
+  margin-bottom: -5px; /* Menor margen entre el subtítulo y los elementos siguientes */
+  letter-spacing: 0.5px; /* Reduce el espaciado */
 }
 
 .title {
   font-family: 'Playfair Display', serif;
-  font-size: 7rem; /* Tamaño destacado */
+  font-size: 6rem; /* Tamaño destacado pero no abrumador */
   color: #8a2be2; /* Lila profundo */
   font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Efecto de sombra */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Más prominente */
   margin: 0;
 }
 
 .name {
-  font-family: 'Dancing Script', cursive; /* Nueva fuente manuscrita */
-  font-size: 3.5rem; /* Tamaño elegante pero no excesivo */
+  font-family: 'Dancing Script', cursive; 
+  font-size: 3.8rem; /* Ajuste más grande para destacar */
   font-weight: 700;
   color: #702c9b;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Efecto de sombra sutil */
-  margin-bottom: 25px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px; /* Espaciado menor */
 }
+
 
 .verse {
   font-family: 'Roboto', sans-serif;
@@ -479,20 +472,42 @@ img {
 
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 480px) {
-  .title {
-    font-size: 5rem; /* Tamaño más grande para el número "70" */
-  }
-
   .subtitle1, .subtitle2 {
-    font-size: 0.9rem; /* Letras más pequeñas para subtítulos */
+    font-size: 1rem !important;
+    color: #4a295e !important;
+    margin-bottom: 5px !important;
+    letter-spacing: 0.5px !important;
+    text-align: center !important;
   }
 
+  
+  .title {
+    font-family: 'Playfair Display', serif;
+    font-size: 10rem; /* Tamaño destacado pero no abrumador */
+    color: #8a2be2; /* Lila profundo */
+    font-weight: 700;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Más prominente */
+    margin: -1;
+  }
+  
   .name {
-    font-size: 2.5rem; /* Reduce el tamaño del nombre */
+    font-family: 'Dancing Script', cursive; 
+    font-size: 3.8rem; /* Ajuste más grande para destacar */
+    font-weight: 700;
+    color: #702c9b;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px; /* Espaciado menor */
   }
-
+  
+  
   .verse {
-    font-size: 0.8rem; /* Texto más pequeño para el versículo */
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #4a295e;
+    font-style: italic;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    line-height: 1.5;
   }
 
   .countdown h2 {
@@ -510,32 +525,29 @@ img {
   .details p {
     font-size: 0.9rem; /* Reduce el texto de los detalles */
   }
-  @media (max-width: 480px) {
-    .wine {
-      flex-basis: 100%; /* Cada imagen ocupa una fila completa */
-      display: flex; /* Activa flexbox */
-      flex-direction: column; /* Acomoda contenido en columna (imagen arriba, texto abajo) */
-      align-items: center; /* Centra todo horizontalmente */
-      text-align: center; /* Centra el texto del <p> */
-      margin-bottom: 20px; /* Espacio entre cada fila */
-    }
-  
-    .wine img {
-      width: auto; /* Ajusta automáticamente el ancho */
-      height: 70px; /* Mantén un tamaño constante */
-      max-width: 50%; /* Evita que la imagen sea más ancha que el contenedor */
-      object-fit: contain; /* Asegura que la imagen no se deforme */
-      margin-bottom: 10px; /* Espacio entre la imagen y el texto */
-    }
-  
-    .wines {
-      gap: 10px; /* Espaciado entre filas */
-    }
-  
-    .wine p {
-      font-size: 0.8rem; /* Tamaño del texto ajustado */
-    }
+  .wine {
+    flex-basis: 100%; /* Cada imagen ocupa una fila completa */
+    display: flex; /* Activa flexbox */
+    flex-direction: column; /* Acomoda contenido en columna (imagen arriba, texto abajo) */
+    align-items: center; /* Centra todo horizontalmente */
+    text-align: center; /* Centra el texto del <p> */
+    margin-bottom: 20px; /* Espacio entre cada fila */
   }
-  
+
+  .wine img {
+    width: auto; /* Ajusta automáticamente el ancho */
+    height: 70px; /* Mantén un tamaño constante */
+    max-width: 50%; /* Evita que la imagen sea más ancha que el contenedor */
+    object-fit: contain; /* Asegura que la imagen no se deforme */
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+  }
+
+  .wines {
+    gap: 10px; /* Espaciado entre filas */
+  }
+
+  .wine p {
+    font-size: 0.8rem; /* Tamaño del texto ajustado */
+  }
 }
 
