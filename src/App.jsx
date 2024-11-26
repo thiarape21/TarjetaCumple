@@ -36,12 +36,12 @@ const App = () => {
           {isPlaying ? "Pausar Música" : "Reproducir Música"}
         </button>
         <div className="header">
-          <h1 className="subtitle1">Estás invitado a celebrar los</h1>
-          <p className="title">70</p>
-          <h1 className="subtitle2">años de</h1>
-          <h1 className="name">Yolanda</h1>
-          <p className="verse">"Para Dios eres más preciosa que los rubíes" <br /> Proverbios 31:10</p>
-        </div>
+        <h1 className="subtitle">Estás invitado a celebrar los</h1>
+        <p className="title">70</p>
+        <h1 className="subtitle">años de</h1>
+        <h1 className="name">Yolanda</h1>
+        <p className="verse">"Para Dios eres más preciosa que los rubíes" <br /> Proverbios 31:10</p>
+      </div>
 
 
         <div className="details">

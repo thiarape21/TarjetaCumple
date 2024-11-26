@@ -1,7 +1,6 @@
 /* Fuentes */
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300&family=Great+Vibes&family=Dancing+Script:wght@700&display=swap");
 
-
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -27,8 +26,6 @@ body {
   width: 100%;
   overflow: hidden; /* Asegura que no se corten elementos fuera del contenedor */
 }
-
-
 
 .content {
   position: relative;
@@ -67,7 +64,7 @@ body {
   font-family: 'Playfair Display', serif;
   font-size: 7rem; /* Tamaño destacado */
   color: #8a2be2; /* Lila profundo */
-  font-weight: 900;
+  font-weight: 700;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Efecto de sombra */
   margin: 0;
 }
@@ -90,8 +87,6 @@ body {
   letter-spacing: 1px;
   line-height: 1.5;
 }
-
-
 
 /* Temporizador */
 .countdown {
@@ -482,16 +477,65 @@ img {
   }
 }
 
+/* Ajustes para pantallas pequeñas */
 @media (max-width: 480px) {
-  .wine {
-    flex-basis: 100%;  /* Las imágenes ocupan el 100% del contenedor */
+  .title {
+    font-size: 5rem; /* Tamaño más grande para el número "70" */
   }
 
-  .wine img {
-    width: 100%;  /* Las imágenes ocupan todo el espacio disponible */
-    max-width: 350px; /* Limitar el tamaño máximo de las imágenes */
-    height: auto;
+  .subtitle1, .subtitle2 {
+    font-size: 0.9rem; /* Letras más pequeñas para subtítulos */
   }
+
+  .name {
+    font-size: 2.5rem; /* Reduce el tamaño del nombre */
+  }
+
+  .verse {
+    font-size: 0.8rem; /* Texto más pequeño para el versículo */
+  }
+
+  .countdown h2 {
+    font-size: 1rem; /* Ajusta el tamaño del texto del temporizador */
+  }
+
+  .countdown-timer span {
+    font-size: 1.6rem; /* Reduce el tamaño de los números del temporizador */
+  }
+
+  .details h2 {
+    font-size: 1.3rem; /* Ajusta el tamaño de los encabezados */
+  }
+
+  .details p {
+    font-size: 0.9rem; /* Reduce el texto de los detalles */
+  }
+  @media (max-width: 480px) {
+    .wine {
+      flex-basis: 100%; /* Cada imagen ocupa una fila completa */
+      display: flex; /* Activa flexbox */
+      flex-direction: column; /* Acomoda contenido en columna (imagen arriba, texto abajo) */
+      align-items: center; /* Centra todo horizontalmente */
+      text-align: center; /* Centra el texto del <p> */
+      margin-bottom: 20px; /* Espacio entre cada fila */
+    }
+  
+    .wine img {
+      width: auto; /* Ajusta automáticamente el ancho */
+      height: 70px; /* Mantén un tamaño constante */
+      max-width: 50%; /* Evita que la imagen sea más ancha que el contenedor */
+      object-fit: contain; /* Asegura que la imagen no se deforme */
+      margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+    }
+  
+    .wines {
+      gap: 10px; /* Espaciado entre filas */
+    }
+  
+    .wine p {
+      font-size: 0.8rem; /* Tamaño del texto ajustado */
+    }
+  }
+  
 }
-
 
