@@ -5,7 +5,7 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url('./images/fondo.png'); /* Ruta de la imagen */
+  background-image: url('./images/fondo.jpg'); /* Ruta de la imagen */
   background-size: contain; /* Ajusta la imagen para que se muestre completamente */
   background-position: top center; /* Centra la imagen horizontalmente y la inicia desde arriba */
   background-repeat: repeat-y; /* Repite la imagen verticalmente */
