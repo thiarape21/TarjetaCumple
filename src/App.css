@@ -473,11 +473,13 @@ img {
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 480px) {
   .subtitle1, .subtitle2 {
-    font-size: 1rem !important;
-    color: #4a295e !important;
-    margin-bottom: 5px !important;
-    letter-spacing: 0.5px !important;
-    text-align: center !important;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #4a295e;
+    font-style: italic;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    line-height: 1.5;
   }
 
   
@@ -488,6 +490,7 @@ img {
     font-weight: 700;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Más prominente */
     margin: -1;
+    margin-top: -60px;
   }
   
   .name {
@@ -500,12 +503,30 @@ img {
   }
   
   
-  .verse {
+  .verse1 {
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     color: #4a295e;
     font-style: italic;
-    margin-top: 20px;
+    margin-top: -5px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+  }
+  .verse2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #4a295e;
+    font-style: italic;
+    margin-top: -1px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+  }
+  .verse3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #4a295e;
+    font-style: italic;
+    margin-top: 10px;
     letter-spacing: 1px;
     line-height: 1.5;
   }
@@ -536,8 +557,8 @@ img {
 
   .wine img {
     width: auto; /* Ajusta automáticamente el ancho */
-    height: 70px; /* Mantén un tamaño constante */
-    max-width: 50%; /* Evita que la imagen sea más ancha que el contenedor */
+    height: 90px; /* Mantén un tamaño constante */
+    max-width: 80%; /* Evita que la imagen sea más ancha que el contenedor */
     object-fit: contain; /* Asegura que la imagen no se deforme */
     margin-bottom: 10px; /* Espacio entre la imagen y el texto */
   }
